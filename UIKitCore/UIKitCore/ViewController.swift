@@ -28,8 +28,23 @@ class ViewController: UIViewController {
             imageView.image = UIImage(named: "greenApple")
             flag = true
         }
-            
+    }
+    
+    
+    @IBAction func showAlert(){
         
+        let alert = UIAlertController(
+            title: "Hello iOS",
+            message: "An alert using Storyboards",
+            preferredStyle: .alert)
+        
+        let action = UIAlertAction(
+            title: "Close me",
+            style: .default,
+            handler: nil)
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
 } //class
